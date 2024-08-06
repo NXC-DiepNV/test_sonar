@@ -1,0 +1,17 @@
+{
+    "name": "nextcore/test_sonar",
+    "autoload": {
+        "psr-4": {
+            "Nextcore\\TestSonar\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ngo Van Diep",
+            "email": "nxt-tranducanh@syp.vn"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^9"
+    }
+}
