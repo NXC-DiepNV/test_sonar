@@ -19,10 +19,10 @@ jobs:
             coverage: xdebug
         - name: Install dependencies with composer
           run: composer update --no-ansi --no-interaction --no-progress
-        # - name: Run tests with phpunit/phpunit
-        #   run: vendor/bin/phpunit --coverage-clover=coverage.xml
-        # - name: SonarQube Scan
-        #   uses: SonarSource/sonarqube-scan-action@master
-        #   env:
-        #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        #     SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        - name: Run tests with phpunit/phpunit
+          run: vendor/bin/phpunit --coverage-clover=coverage.xml
+        - name: SonarQube Scan
+          uses: SonarSource/sonarqube-scan-action@master
+          env:
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+            SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
