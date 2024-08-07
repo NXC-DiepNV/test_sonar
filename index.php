@@ -24,6 +24,14 @@ echo "<div>$userInput</div>";
 
 // Lỗi hardcoded credentials
 $dbPassword = 'hardcodedPassword';
+
+$this = 1;
+
+$text = '';
+
+$text =+ '12';
+
+
 ?>
 <body>
     <h1>DiepNV test 1 <?php echo $password; ?></h1>
