@@ -10,11 +10,11 @@
     $password = '12345';
 
     function abcd() {
-        return '123';
+        return 1;
     }
  ?>
 <body>
-    <h1>DiepNV test 1 <?php echo $password; abcde() ?></h1>
+    <h1>DiepNV test 1 <?php echo $password; if (abc() == 2) { echo 'ABC';} ?></h1>
 </body>
 
 
