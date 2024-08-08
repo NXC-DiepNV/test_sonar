@@ -32,6 +32,29 @@ $text = '';
 $text =+ '12';
 
 
+if ($b == 0) {  // Noncompliant
+    doOneMoreThing();
+  } else {
+    doOneMoreThing();
+  }
+  
+  $b = $a > 12 ? 4 : 4;  // Noncompliant
+  
+  switch ($i) {  // Noncompliant
+    case 1:
+      doSomething();
+      break;
+    case 2:
+      doSomething();
+      break;
+    case 3:
+      doSomething();
+      break;
+    default:
+      doSomething();
+  }
+
+
 ?>
 <body>
     <h1>DiepNV test 1 <?php echo $password; ?></h1>
