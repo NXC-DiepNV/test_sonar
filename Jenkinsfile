@@ -25,7 +25,7 @@ pipeline {
                 SCANNER_HOME = tool 'sonarqube-scanner'
             }
             steps {
-                withSonarQubeEnv('SonarQube') {
+                withSonarQubeEnv('sonarqube') {
                     sh '''$SCANNER_HOME/bin/sonar-scanner \
                         -Dsonar.projectKey=NXC-DiepNV_test_sonar_AZEqf7JbBamAUScLB3gf \
                         -Dsonar.sources=./src \
