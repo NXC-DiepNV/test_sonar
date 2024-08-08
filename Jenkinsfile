@@ -21,14 +21,17 @@ pipeline {
         //     }
         // }
         stage('SonarQube Analysis') {
+            environment {
+                SCANNER_HOME = tool 'sonarqube-scanner'
+            }
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    sh "sonar-scanner \
+                    sh '''$SCANNER_HOME/bin/sonar-scanner \
                         -Dsonar.projectKey=NXC-DiepNV_test_sonar_AZEqf7JbBamAUScLB3gf \
                         -Dsonar.sources=./src \
                         -Dsonar.host.url=${SONAR_HOST_URL} \
                         -Dsonar.login=${SONAR_TOKEN} \
-                        -Dsonar.php.coverage.reportPaths=./coverage.xml"
+                        -Dsonar.php.coverage.reportPaths=./coverage.xml'''
                 }
             }
         }
