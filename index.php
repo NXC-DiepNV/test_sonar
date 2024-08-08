@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 
+<?php
+
+?>
 <body>
     <h1>DiepNV test 1</h1>
 </body>
