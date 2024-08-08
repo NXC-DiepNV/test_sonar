@@ -10,13 +10,6 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/NXC-DiepNV/test_sonar.git'
             }
         }
-        stage('Setup PHP') {
-            steps {
-                sh 'sudo apt-get update'
-                sh 'sudo apt-get install -y php8.1 php8.1-xml php8.1-mbstring php8.1-zip'
-                sh 'php -v'
-            }
-        }
         stage('Install Dependencies') {
             steps {
                 sh 'composer update --no-ansi --no-interaction --no-progress'
