@@ -27,11 +27,8 @@ pipeline {
             steps {
                 withSonarQubeEnv('sonarqube') {
                     sh '''$SCANNER_HOME/bin/sonar-scanner \
-                        -Dsonar.projectKey=NXC-DiepNV_test_sonar_AZEqf7JbBamAUScLB3gf \
-                        -Dsonar.sources=./src \
                         -Dsonar.host.url=${SONAR_HOST_URL} \
-                        -Dsonar.login=${SONAR_TOKEN} \
-                        -Dsonar.php.coverage.reportPaths=./coverage.xml'''
+                        -Dsonar.login=${SONAR_TOKEN}'''
                 }
             }
         }
