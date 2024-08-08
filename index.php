@@ -32,6 +32,10 @@ $text = '';
 $text =+ '12';
 
 
+function doOneMoreThing() {
+    return '1234';
+}
+
 if ($b == 0) {  // Noncompliant
     doOneMoreThing();
   } else {

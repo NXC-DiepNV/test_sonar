@@ -37,16 +37,16 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                echo "Tétttt"
+                echo "---------- Testing -----------------"
             }
         }
     }
     post {
         success {
-            echo 'Build and analysis completed successfully.'
+            echo 'Build thành công.'
         }
         failure {
-            echo 'Build or analysis failed.'
+            echo 'Build Thất bại'
         }
     }
 }
