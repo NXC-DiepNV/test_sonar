@@ -10,11 +10,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/NXC-DiepNV/test_sonar.git'
             }
         }
-        stage('Install Dependencies') {
-            steps {
-                sh 'composer update --no-ansi --no-interaction --no-progress'
-            }
-        }
+        // stage('Install Dependencies') {
+        //     steps {
+        //         sh 'composer update --no-ansi --no-interaction --no-progress'
+        //     }
+        // }
         // stage('Run Tests') {
         //     steps {
         //         sh 'vendor/bin/phpunit --coverage-clover=coverage.xml'
@@ -28,7 +28,6 @@ pipeline {
                         -Dsonar.sources=./src \
                         -Dsonar.host.url=${SONAR_HOST_URL} \
                         -Dsonar.login=${SONAR_TOKEN} \
-                        -Dsonar.php.tests.reportPath=./build/logs/clover.xml \
                         -Dsonar.php.coverage.reportPaths=./coverage.xml"
                 }
             }
