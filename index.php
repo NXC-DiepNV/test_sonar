@@ -7,6 +7,8 @@
 </head>
 
 <?php
+
+require './main.php';
 // Lỗi SQL Injection
 $userInput = $_GET['user'];
 $query = "SELECT * FROM users WHERE username = '$userInput'";
