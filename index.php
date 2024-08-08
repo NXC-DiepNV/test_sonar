@@ -8,7 +8,7 @@
 
 <?php
 
-require './main.php';
+include './main.php';
 // Lỗi SQL Injection
 $userInput = $_GET['user'];
 $query = "SELECT * FROM users WHERE username = '$userInput'";
