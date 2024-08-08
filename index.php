@@ -38,6 +38,26 @@ function doOneMoreThing() {
     return '1234';
 }
 
+function doOneMoreThings($id) {
+    if ($id == 1) {
+        return 1;
+    } elseif ($id == 2) {
+        return 2;
+    } elseif ($id == 3) {
+        return 3;
+    } elseif ($id == 4) {
+        return 4;
+    } elseif ($id == 5) {
+        return 5;
+    } elseif ($id == 6) {
+        return 6;
+    } elseif ($id == 7) {
+        return 7;
+    } else {
+        return  '';
+    }
+}
+
 if ($b == 0) {  // Noncompliant
     doOneMoreThing();
   } else {
