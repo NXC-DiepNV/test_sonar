@@ -22,14 +22,22 @@ pipeline {
                 }
             }
         }
-        stage('Quality Gate') {
+        stage("Quality Gate"){
             steps {
-                waitForQualityGate abortPipeline: true
+                script {
+                    timeout(time: 1, unit: 'HOURS') {
+                   
+                    def qg = waitForQualityGate()
+                    if (qg.status != 'OK') {
+                        error "Sonarqube còn có lỗi: ${qg.status}"
+                        }
+                    }
+                }
             }
         }
         stage('Run Tests') {
             steps {
-                echo "run téttt"
+                echo "Tétttt"
             }
         }
     }

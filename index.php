@@ -54,9 +54,7 @@ if ($b == 0) {  // Noncompliant
       doSomething();
   }
 
-  for ($i = 0; $i < $length; $i--) { // Noncompliant
-    //...
-  }
+  for ($i = 0; $i < $length; $i--) 
 
 
 ?>
