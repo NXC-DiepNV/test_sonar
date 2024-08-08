@@ -10,16 +10,6 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/NXC-DiepNV/test_sonar.git'
             }
         }
-        // stage('Install Dependencies') {
-        //     steps {
-        //         sh 'composer update --no-ansi --no-interaction --no-progress'
-        //     }
-        // }
-        // stage('Run Tests') {
-        //     steps {
-        //         sh 'vendor/bin/phpunit --coverage-clover=coverage.xml'
-        //     }
-        // }
         stage('SonarQube Analysis') {
             environment {
                 SCANNER_HOME = tool 'sonarqube-scanner'
@@ -30,6 +20,11 @@ pipeline {
                         -Dsonar.host.url=${SONAR_HOST_URL} \
                         -Dsonar.login=${SONAR_TOKEN}'''
                 }
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                echo "run téttt"
             }
         }
     }
