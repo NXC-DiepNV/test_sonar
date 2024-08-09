@@ -9,25 +9,8 @@
 <?php
 
 include_once './main.php';
-// Lỗi SQL Injection
-$userInput = $_GET['user'];
-$query = "SELECT * FROM users WHERE username = '$userInput'";
-$result = mysqli_query($conn, $query);
 
-// Lỗi sử dụng biến chưa được khởi tạo
-echo $uninitializedVariable;
-
-// Lỗi không kiểm tra kết quả của hàm fopen
-$file = fopen("test.txt", "r");
-
-// Lỗi XSS
-$userInput = $_GET['userInput'];
-echo "<div>$userInput</div>";
-
-// Lỗi hardcoded credentials
-$dbPassword = 'hardcodedPassword';
-
-$this = 1;
+$password = '12345';
 
 $text = '';
 
