@@ -16,6 +16,10 @@ $text = '';
 
 $text =+ '12';
 
+$text2 = '';
+
+$text2 =+ '12';
+
 
 function doOneMoreThing() {
     return '1234';
