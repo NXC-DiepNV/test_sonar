@@ -8,9 +8,9 @@
 
 <?php
 
+include_once './main.php';
 
-
-$password = '12345';
+$password = '123456';
 
 $text = '';
 
